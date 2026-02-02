@@ -1,7 +1,40 @@
-# Tauri + React + Typescript
+# 🎵 Ongaku Player
 
-This template should help get you started developing with Tauri, React and Typescript in Vite.
+Ongaku Player is a **desktop music player/Content downloader**
 
-## Recommended IDE Setup
+---
 
-- [VS Code](https://code.visualstudio.com/) + [Tauri](https://marketplace.visualstudio.com/items?itemName=tauri-apps.tauri-vscode) + [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer)
+## 🧱 Tech Stack
+
+* **React** – UI layer
+* **TypeScript** – type safety and maintainability
+* **Tailwind CSS** – utility-first styling
+* **shadcn/ui** – accessible and composable UI components
+* **Tauri** – lightweight and secure desktop framework
+* **Rust** – high-performance native backend
+
+---
+
+## 🎨 UI & Design
+
+* **Design system:** shadcn/ui
+* **UI reference template:** [Retro UI – Progress](https://www.retroui.dev/docs/components/progress)
+
+---
+
+## 📚 Libraries
+
+> ⚠️ Work in progress
+
+The list of libraries will be updated as the project evolves.
+
+---
+
+
+## 📄 License
+
+MIT
+
+---
+
+> Made with ❤️ using React, Rust, and Tauri
