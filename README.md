@@ -26,7 +26,7 @@ Ongaku Player is a **desktop music player/Content downloader**
 
 > ⚠️ Work in progress
 
-The list of libraries will be updated as the project evolves.
+* **tanstack Router** - Routing
 
 ---
 

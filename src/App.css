@@ -154,6 +154,8 @@
   --color-deep-lilac-800: hsl(255.7 41.2% 20%);
   --color-deep-lilac-900: hsl(257.1 41.2% 10%);
   --color-deep-lilac-950: hsl(252.9 38.9% 7.1%);
+
+  --background-pattern: #ffcaf9;
 }
 
 .dark {
@@ -177,6 +179,15 @@
 }
 
 @theme inline {
-  --color-primary: var(--color-deep-lilac-100);
+  --color-primary: var(--color-thistle-400);
   --color-border-1: var(--color-deep-lilac-800);
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: var(--background-pattern);
 }
