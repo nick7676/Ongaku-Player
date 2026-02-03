@@ -1,8 +1,12 @@
 import { Button } from "@/components/retroui/Button"
 import { Drawer } from "@/components/retroui/Drawer"
 import { Menu } from "lucide-react"
+import { useTranslation } from "react-i18next"
 
 export function SideDrawer() {
+
+    const { t } = useTranslation()
+
     return (
         <div className="ml-1 mt-1">
             <Drawer direction="left">
@@ -11,9 +15,10 @@ export function SideDrawer() {
                 </Drawer.Trigger>
                 <Drawer.Content>
                     <Drawer.Header>
-                        <Drawer.Title>Edit Profile</Drawer.Title>
-                        <Drawer.Description>Make changes to your profile here. Click save when you're done.</Drawer.Description>
                     </Drawer.Header>
+                    <Drawer.Footer>
+                    <p>{t('credits')}</p>
+                    </Drawer.Footer>
                 </Drawer.Content>
             </Drawer>
         </div>

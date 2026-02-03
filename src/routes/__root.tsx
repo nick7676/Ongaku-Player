@@ -1,4 +1,4 @@
-import MainLayout from '@/Layouts/mainLayout/mainLayout'
+import MainLayout from '@/Layouts/mainLayout/MainLayout'
 import { createRootRoute, Outlet } from '@tanstack/react-router'
 
 

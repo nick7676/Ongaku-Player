@@ -1,11 +1,9 @@
 @import "tailwindcss";
 @import "tw-animate-css";
-/* styles.css */
-@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
 
 @theme {
-  --font-head: "Archivo Black", sans-serif;
-  --font-sans: "Space Grotesk", sans-serif;
+  --font-head: "Roboto", sans-serif;
+  --font-sans: "Roboto", sans-serif;
   --radius: var(--radius);
 
   --shadow-xs: 1px 1px 0 0 var(--border);
@@ -186,6 +184,7 @@
 html,
 body {
   height: 100%;
+  font-family: "Roboto", sans-serif;
 }
 
 body {
