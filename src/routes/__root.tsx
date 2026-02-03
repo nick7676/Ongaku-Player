@@ -1,9 +1,11 @@
-import { createRootRoute } from '@tanstack/react-router'
+import MainLayout from '@/Layouts/mainLayout/mainLayout'
+import { createRootRoute, Outlet } from '@tanstack/react-router'
 
 
 const RootLayout = () => (
     <>
-        <p> ciao</p>
+        <MainLayout />
+        <Outlet />
     </>
 )
 
