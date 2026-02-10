@@ -7,31 +7,63 @@ import { useState } from "react";
 interface SearchBarProps {
     icon?: React.ReactNode
 }
+interface VideoOption {
+    id: String;
+    label: String;
+}
 
 export default function SearchBar({ icon }: SearchBarProps) {
-
-    const [link, setLink] = useState("")
+    const [link, setLink] = useState("");
+    const [options, setOptions] = useState<VideoOption[]>([]);
+    const [loading, setLoading] = useState(false);
 
     const sendLink = async () => {
-        await invoke('link_reader', { link: link })
+        if (!link) return;
+        setLoading(true);
+        try {
+            const data = await invoke<VideoOption[]>('get_options', { url: link });
+            setOptions(data);
+        } catch (error) {
+            console.error("Errore nel recupero opzioni:", error);
+        } finally {
+            setLoading(false);
+        }
     }
 
-    if (!icon) {
-        return (
-            <div>
-                <Label htmlFor="welcome">Insert a link</Label>
-                <Input type="text" placeholder="Let's download something..."></Input>
-            </div>
-        )
-    } else {
-        return (
+    return (
+        <div className="flex flex-col gap-4">
             <div>
                 <Label htmlFor="welcome">Insert a link</Label>
                 <div className="flex items-center gap-2">
-                    <Input type="text" placeholder="Let's download something..." onChange={(e) => setLink(e.target.value)}></Input>
-                    <Button size={"icon"} onClick={sendLink}>{icon}</Button>
+                    <Input 
+                        id="welcome"
+                        type="text" 
+                        placeholder={loading ? "Analyzing..." : "Let's download something..."}
+                        onChange={(e) => setLink(e.target.value)}
+                        disabled={loading}
+                    />
+                    <Button size={"icon"} onClick={sendLink} disabled={loading}>
+                        {icon}
+                    </Button>
                 </div>
             </div>
-        )
-    }
+
+            {options.length > 0 && (
+                <div className="grid grid-cols-1 gap-2 mt-4 max-h-60 overflow-y-auto p-2 border rounded-md border-zinc-800">
+                    <p className="text-sm font-bold">Select format:</p>
+                    {options.map((opt) => (
+                        <div key={opt.id.toString()} className="flex justify-between items-center bg-zinc-900 p-2 rounded">
+                            <span className="text-sm">{opt.label}</span>
+                            <Button 
+                                size="sm" 
+                                onClick={() => console.log("Scarico ID:", opt.id)}
+                            >
+                                Download
+                            </Button>
+                        </div>
+                    ))}
+                </div>
+            )}
+        </div>
+    )
 }
