@@ -1,9 +1,11 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@import url("https://fonts.googleapis.com/css2?family=Bungee&family=Caprasimo&display=swap");
 
 @theme {
   --font-head: "Roboto", sans-serif;
   --font-sans: "Roboto", sans-serif;
+  --font-display: "Caprasimo", cursive;
   --radius: var(--radius);
 
   --shadow-xs: 1px 1px 0 0 var(--border);
@@ -33,127 +35,65 @@
 }
 
 :root {
-  --color-thistle-50: hsl(278.2 44% 95.1%);
-  --color-thistle-100: hsl(280 41.2% 90%);
-  --color-thistle-200: hsl(278.6 41.2% 80%);
-  --color-thistle-300: hsl(278.8 42.5% 70%);
-  --color-thistle-400: hsl(279.1 42.2% 60%);
-  --color-thistle-500: hsl(279.3 42% 50%);
-  --color-thistle-600: hsl(279.1 42.2% 40%);
-  --color-thistle-700: hsl(278.8 42.5% 30%);
-  --color-thistle-800: hsl(278.6 41.2% 20%);
-  --color-thistle-900: hsl(280 41.2% 10%);
-  --color-thistle-950: hsl(280 42.9% 6.9%);
+  --color-onyx-50: hsl(180 4% 95.1%);
+  --color-onyx-100: hsl(180 5.9% 90%);
+  --color-onyx-200: hsl(180 3.9% 80%);
+  --color-onyx-300: hsl(180 4.6% 70%);
+  --color-onyx-400: hsl(180 3.9% 60%);
+  --color-onyx-500: hsl(180 4.3% 50%);
+  --color-onyx-600: hsl(180 3.9% 40%);
+  --color-onyx-700: hsl(180 4.6% 30%);
+  --color-onyx-800: hsl(180 3.9% 20%);
+  --color-onyx-900: hsl(180 5.9% 10%);
+  --color-onyx-950: hsl(180 5.6% 7.1%);
 
-  --color-thistle-50: hsl(278.2 44% 95.1%);
-  --color-thistle-100: hsl(276.5 45.1% 90%);
-  --color-thistle-200: hsl(276.5 45.1% 80%);
-  --color-thistle-300: hsl(277.4 45.1% 70%);
-  --color-thistle-400: hsl(277.2 45.1% 60%);
-  --color-thistle-500: hsl(277 45.1% 50%);
-  --color-thistle-600: hsl(277.2 45.1% 40%);
-  --color-thistle-700: hsl(277.4 45.1% 30%);
-  --color-thistle-800: hsl(276.5 45.1% 20%);
-  --color-thistle-900: hsl(276.5 45.1% 10%);
-  --color-thistle-950: hsl(277.5 44.4% 7.1%);
+  --color-jet-black-50: hsl(220 12% 95.1%);
+  --color-jet-black-100: hsl(216 9.8% 90%);
+  --color-jet-black-200: hsl(215 11.8% 80%);
+  --color-jet-black-300: hsl(215.3 11.1% 70%);
+  --color-jet-black-400: hsl(215.5 10.8% 60%);
+  --color-jet-black-500: hsl(215.2 11.4% 50%);
+  --color-jet-black-600: hsl(215.5 10.8% 40%);
+  --color-jet-black-700: hsl(215.3 11.1% 30%);
+  --color-jet-black-800: hsl(215 11.8% 20%);
+  --color-jet-black-900: hsl(216 9.8% 10%);
+  --color-jet-black-950: hsl(225 11.1% 7.1%);
 
-  --color-wisteria-50: hsl(275 46.2% 94.9%);
-  --color-wisteria-100: hsl(273.9 45.1% 90%);
-  --color-wisteria-200: hsl(275 47.1% 80%);
-  --color-wisteria-300: hsl(274.6 46.4% 70%);
-  --color-wisteria-400: hsl(275 47.1% 60%);
-  --color-wisteria-500: hsl(274.8 46.7% 50%);
-  --color-wisteria-600: hsl(275 47.1% 40%);
-  --color-wisteria-700: hsl(274.6 46.4% 30%);
-  --color-wisteria-800: hsl(275 47.1% 20%);
-  --color-wisteria-900: hsl(273.9 45.1% 10%);
-  --color-wisteria-950: hsl(275.3 48.6% 6.9%);
+  --color-platinum-50: hsl(210 7.7% 94.9%);
+  --color-platinum-100: hsl(220 5.9% 90%);
+  --color-platinum-200: hsl(217.5 7.8% 80%);
+  --color-platinum-300: hsl(218.2 7.2% 70%);
+  --color-platinum-400: hsl(218.6 6.9% 60%);
+  --color-platinum-500: hsl(218.8 6.7% 50%);
+  --color-platinum-600: hsl(218.6 6.9% 40%);
+  --color-platinum-700: hsl(218.2 7.2% 30%);
+  --color-platinum-800: hsl(217.5 7.8% 20%);
+  --color-platinum-900: hsl(220 5.9% 10%);
+  --color-platinum-950: hsl(240 5.6% 7.1%);
 
-  --color-wisteria-50: hsl(272.3 52% 95.1%);
-  --color-wisteria-100: hsl(271.1 52.9% 90%);
-  --color-wisteria-200: hsl(272.2 52.9% 80%);
-  --color-wisteria-300: hsl(271.9 51.6% 70%);
-  --color-wisteria-400: hsl(272.3 52% 60%);
-  --color-wisteria-500: hsl(272 52.2% 50%);
-  --color-wisteria-600: hsl(272.3 52% 40%);
-  --color-wisteria-700: hsl(271.9 51.6% 30%);
-  --color-wisteria-800: hsl(272.2 52.9% 20%);
-  --color-wisteria-900: hsl(271.1 52.9% 10%);
-  --color-wisteria-950: hsl(270 50% 7.1%);
+  --color-bright-gold-50: hsl(52.5 92.3% 94.9%);
+  --color-bright-gold-100: hsl(51.4 96.1% 90%);
+  --color-bright-gold-200: hsl(52 96.1% 80%);
+  --color-bright-gold-300: hsl(51.8 96.1% 70%);
+  --color-bright-gold-400: hsl(52 96.1% 60%);
+  --color-bright-gold-500: hsl(51.9 96.1% 50%);
+  --color-bright-gold-600: hsl(52 96.1% 40%);
+  --color-bright-gold-700: hsl(51.8 96.1% 30%);
+  --color-bright-gold-800: hsl(52 96.1% 20%);
+  --color-bright-gold-900: hsl(51.4 96.1% 10%);
+  --color-bright-gold-950: hsl(51.2 94.4% 7.1%);
 
-  --color-bright-lavender-50: hsl(270 53.8% 94.9%);
-  --color-bright-lavender-100: hsl(271.1 52.9% 90%);
-  --color-bright-lavender-200: hsl(271.1 54.9% 80%);
-  --color-bright-lavender-300: hsl(271.1 54.2% 70%);
-  --color-bright-lavender-400: hsl(271.1 53.9% 60%);
-  --color-bright-lavender-500: hsl(271.1 53.7% 50%);
-  --color-bright-lavender-600: hsl(271.1 53.9% 40%);
-  --color-bright-lavender-700: hsl(271.1 54.2% 30%);
-  --color-bright-lavender-800: hsl(271.1 54.9% 20%);
-  --color-bright-lavender-900: hsl(271.1 52.9% 10%);
-  --color-bright-lavender-950: hsl(271.6 54.3% 6.9%);
-
-  --color-lavender-purple-50: hsl(270 53.8% 94.9%);
-  --color-lavender-purple-100: hsl(271 56.9% 90%);
-  --color-lavender-purple-200: hsl(270 56.9% 80%);
-  --color-lavender-purple-300: hsl(269.6 55.6% 70%);
-  --color-lavender-purple-400: hsl(270 55.9% 60%);
-  --color-lavender-purple-500: hsl(269.8 56.1% 50%);
-  --color-lavender-purple-600: hsl(270 55.9% 40%);
-  --color-lavender-purple-700: hsl(269.6 55.6% 30%);
-  --color-lavender-purple-800: hsl(270 56.9% 20%);
-  --color-lavender-purple-900: hsl(269 56.9% 10%);
-  --color-lavender-purple-950: hsl(270 55.6% 7.1%);
-
-  --color-lavender-purple-50: hsl(267.7 52% 95.1%);
-  --color-lavender-purple-100: hsl(266.4 49% 90%);
-  --color-lavender-purple-200: hsl(265.9 50.5% 80.2%);
-  --color-lavender-purple-300: hsl(267.3 50.3% 70%);
-  --color-lavender-purple-400: hsl(267.1 50% 60%);
-  --color-lavender-purple-500: hsl(266.9 49.8% 50%);
-  --color-lavender-purple-600: hsl(267.1 50% 40%);
-  --color-lavender-purple-700: hsl(267.3 50.3% 30%);
-  --color-lavender-purple-800: hsl(266.5 51% 20%);
-  --color-lavender-purple-900: hsl(266.4 49% 10%);
-  --color-lavender-purple-950: hsl(266.7 50% 7.1%);
-
-  --color-deep-lilac-50: hsl(261.8 44% 95.1%);
-  --color-deep-lilac-100: hsl(263.5 45.1% 90%);
-  --color-deep-lilac-200: hsl(263.5 45.1% 80%);
-  --color-deep-lilac-300: hsl(262.6 45.1% 70%);
-  --color-deep-lilac-400: hsl(262.8 45.1% 60%);
-  --color-deep-lilac-500: hsl(263 45.1% 50%);
-  --color-deep-lilac-600: hsl(262.8 45.1% 40%);
-  --color-deep-lilac-700: hsl(262.6 45.1% 30%);
-  --color-deep-lilac-800: hsl(263.5 45.1% 20%);
-  --color-deep-lilac-900: hsl(263.5 45.1% 10%);
-  --color-deep-lilac-950: hsl(262.5 44.4% 7.1%);
-
-  --color-deep-lilac-50: hsl(264 38.5% 94.9%);
-  --color-deep-lilac-100: hsl(260 41.2% 90%);
-  --color-deep-lilac-200: hsl(259.5 39.2% 80%);
-  --color-deep-lilac-300: hsl(259.7 39.9% 70%);
-  --color-deep-lilac-400: hsl(259.8 40.2% 60%);
-  --color-deep-lilac-500: hsl(260 40.2% 50.2%);
-  --color-deep-lilac-600: hsl(259.8 40.2% 40%);
-  --color-deep-lilac-700: hsl(259.7 39.9% 30%);
-  --color-deep-lilac-800: hsl(259.5 39.2% 20%);
-  --color-deep-lilac-900: hsl(260 41.2% 10%);
-  --color-deep-lilac-950: hsl(257.1 38.9% 7.1%);
-
-  --color-deep-lilac-50: hsl(258 38.5% 94.9%);
-  --color-deep-lilac-100: hsl(257.1 41.2% 90%);
-  --color-deep-lilac-200: hsl(255.7 41.2% 80%);
-  --color-deep-lilac-300: hsl(256.2 41.2% 70%);
-  --color-deep-lilac-400: hsl(255.7 41.2% 60%);
-  --color-deep-lilac-500: hsl(256 41.2% 50%);
-  --color-deep-lilac-600: hsl(255.7 41.2% 40%);
-  --color-deep-lilac-700: hsl(256.2 41.2% 30%);
-  --color-deep-lilac-800: hsl(255.7 41.2% 20%);
-  --color-deep-lilac-900: hsl(257.1 41.2% 10%);
-  --color-deep-lilac-950: hsl(252.9 38.9% 7.1%);
-
-  --background-pattern: #ffcaf9;
+  --color-saffron-50: hsl(48 76.9% 94.9%);
+  --color-saffron-100: hsl(45.4 80.4% 90%);
+  --color-saffron-200: hsl(46.1 80.4% 80%);
+  --color-saffron-300: hsl(45.9 80.4% 70%);
+  --color-saffron-400: hsl(46.1 80.4% 60%);
+  --color-saffron-500: hsl(46 80.4% 50%);
+  --color-saffron-600: hsl(46.1 80.4% 40%);
+  --color-saffron-700: hsl(45.9 80.4% 30%);
+  --color-saffron-800: hsl(46.1 80.4% 20%);
+  --color-saffron-900: hsl(45.4 80.4% 10%);
+  --color-saffron-950: hsl(45 77.8% 7.1%);
 }
 
 .dark {
